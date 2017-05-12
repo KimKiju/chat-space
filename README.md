@@ -19,6 +19,7 @@
 ***
 
 ##user_groupsテーブル（belongs_to: user,belongs_to: group）
+
 |column    |type     |option               |
 |:---------|---------|---------------------|
 |user_id   |integer  |null: false          |
