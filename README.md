@@ -1,38 +1,36 @@
 #データベース設計
 
-##usersテーブル(has_many: messages,has_many: user_groups)
+##usersテーブル(has_many: messages,has_many: groups through: user_group)
 
 |column    |type     |option               |
 |:---------|---------|---------------------|
-|email     |string   |null: false          |
-|password  |string   |null: false          |
 |nickname  |string   |null: false add_index|
 
 ***
 
-##groupsテーブル(has_many: messages,has_many: user_groups)
+##groupsテーブル(has_many: messages,has_many: users through:user_grup)
 
-|column    |type     |option               |
-|:---------|---------|---------------------|
-|group_name|string   |null: false          |
+|column    |type     |option                  |
+|:---------|---------|------------------------|
+|name      |string   |null: false unique: true|
 
 ***
 
 ##user_groupsテーブル（belongs_to: user,belongs_to: group）
 
-|column    |type     |option               |
-|:---------|---------|---------------------|
-|user_id   |integer  |null: false          |
-|group_id  |integer  |null: false          |
+|column    |type     |option                       |
+|:---------|---------|-----------------------------|
+|user_id   |integer  |null: false foreign_key: true|
+|group_id  |integer  |null: false foreign_key: true|
 
 
 ***
 
 ##messagesテーブル(belongs_to: user,belongs_to: group)
 
-|column    |type     |option               |
-|:---------|---------|---------------------|
-|body      |text     |                     |
-|user_id   |integer  |null: false          |
-|group_id  |integer  |                     |
+|column    |type     |option                       |
+|:---------|---------|-----------------------------|
+|body      |text     |                             |
+|user_id   |integer  |null: false foreign_key: true|
+|group_id  |integer  |foreign_key: true            |
 ***
