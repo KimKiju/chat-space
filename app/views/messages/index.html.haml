@@ -1,1 +1,49 @@
-%div.contents
+.alert
+.layout-notification
+  .chat.clearfix
+    .chat-side
+      .chat-side-user
+        .user__action
+          %span.name sample
+          %i.fa.fa-pencil-square-o
+          %i.fa.fa-cog
+
+      .chat-side-groups
+        %ul.chat-groups
+          %li.chat-group
+            %p.chat-group__name sample
+            %p.chat-group__message まだメッセージはありません。
+          %li.chat-group
+            %p.chat-group__name sample
+            %p.chat-group__message まだメッセージはありません。
+          %li.chat-group
+            %p.chat-group__name sample
+            %p.chat-group__message まだメッセージはありません。
+    .chat-main
+      .chat-main-group
+        .name
+          %span sample_group
+          %a.edit-group{href: "/"} Edit
+        .member members: sample
+      .chat-main-index
+        %ul.chat-bodys
+          %li.chat-body
+            %p.chat-body__header
+              %span.__name sample
+              %span.__time 2017/05/16 19:27:30
+            %p.chat-body__message sample,sample,saple,sample,sample
+          %li.chat-body
+            %p.chat-body__header
+              %span.__name sample
+              %span.__time 2017/05/16 19:27:30
+            %p.chat-body__message sample,sample,saple,sample,sample
+          %li.chat-body
+            %p.chat-body__header
+              %span.__name sample
+              %span.__time 2017/05/16 19:27:30
+            %p.chat-body__message sample,sample,saple,sample,sample
+      .chat-main-footer
+        .message_contents
+          %input.comment_space{type: "text",row: "1", placeholder: "type a message "}
+          %i.fa.fa-image
+          %input.comment_submit{type: "submit",value: "Send"}
