@@ -1,0 +1,30 @@
+.notice{
+  background-color: #38AEF0;
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.alert{
+  background-color: #FF0000;
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.layout-notification{
+  height: 100%;
+}
+
+// .flash {
+//   color: $white;
+//   text-align: center;
+//   &__alert{
+//     background-color: red;
+//   }
+//   &__notice {
+//     background-color: $blue;
+//   }
+// }
