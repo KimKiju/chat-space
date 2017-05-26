@@ -25,9 +25,14 @@
    font-weight: bold;
    margin-top: 35px;
    color: #FFFFFF;
-   i.fa.fa-pencil-square-o{
-    margin-left: 150px;
-   }
+    .icons{
+      float: right;
+      margin-right: 45px;
+      a{
+        color: #FFFFFF;
+        font-size: 20px;
+      }
+    }
   }
 }
 

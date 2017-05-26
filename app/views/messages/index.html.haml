@@ -5,9 +5,13 @@
       .chat-side-user
         .user__action
           %span.name sample
-          %i.fa.fa-pencil-square-o
-          %i.fa.fa-cog
-
+          / %a.fontawesome-link-left{href: "/"}
+          /   %i.fa.fa-pencil-square-o
+          / %a.fontawesome-link-right{href: "/users/edit"}
+          /   %i.fa.fa-cog
+          .icons
+            = link_to fa_icon("pencil-square-o")
+            = link_to fa_icon("cog"), edit_user_registration_path
       .chat-side-groups
         %ul.chat-groups
           %li.chat-group
